@@ -36,7 +36,7 @@ class AdamW(Optimizer):
       loss=closure()
       
     for group in self.param_groups:
-      for in in group['params']:
+      for p in group['params']:
         if p.grad in None:
           continue
         grad=p.grad.data
