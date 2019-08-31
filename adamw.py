@@ -9,7 +9,7 @@ Original file is located at
 
 import math
 import torch
-import torch.optim.optimizer as Optimizer
+from torch.optim.optimizer import Optimizer
 
 class AdamW(Optimizer):
   def __init__(self,params,lr=1e-3,betas=(0.9,0.999),eps=1e-8,weight_decay=0,amsgrad=False):
