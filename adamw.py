@@ -37,7 +37,7 @@ class AdamW(Optimizer):
       
     for group in self.param_groups:
       for p in group['params']:
-        if p.grad in None:
+        if p.grad is None:
           continue
         grad=p.grad.data
         if grad.is_sparse:
